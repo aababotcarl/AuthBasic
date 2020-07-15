@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: node-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: node-ssl-prod
+spec:
+  tls:
+    - hosts:
+        - startupcode.io
+      secretName: node-ssl-prod
+  rules:
+    - host: startupcode.io
+      http:
+        paths:
+          - path: /*
+          backend:
+            serviceName: lockjs
+            servicePort: 80
+          - backend:
+            serviceName: node
+            servicePort: 80

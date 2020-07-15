@@ -1,0 +1,27 @@
+{
+	"development": {
+	  "username": "carl",
+	  "password": "a@baBot2323",
+	  "database": "AuthDB",
+	  "host": "34.69.175.239",
+	  "dialect": "mysql",
+	  "define": {
+		  "timestamps": false
+	  }
+	},
+	"test": {
+	  "username": "carl",
+	  "password": "a@baBot2323",
+	  "database": "AuthDB",
+	  "host": "34.69.175.239",
+	  "dialect": "mysql"
+	  
+	},
+	"production": {
+	  "username": "carl",
+	  "password": "a@baBot2323",
+	  "database": "AuthDB",
+	  "host": "34.69.175.239",
+	  "dialect": "mysql"
+	}
+  }
